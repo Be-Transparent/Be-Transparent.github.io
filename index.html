@@ -22,41 +22,60 @@
             padding: 80px 40px;
         }
         
-        .cloud-animation {
-            width: 120px;
-            height: 80px;
+        .network-animation {
+            width: 200px;
+            height: 140px;
             margin: 0 auto 40px;
             position: relative;
         }
         
-        .cloud {
-            fill: none;
+        .network-line {
             stroke: #5f6368;
-            stroke-width: 2;
-            animation: float 6s ease-in-out infinite;
+            stroke-width: 1.5;
+            fill: none;
+            opacity: 0.4;
+            animation: pulse-line 3s ease-in-out infinite;
         }
         
-        .cloud-dot {
+        .network-node {
             fill: #5f6368;
-            animation: pulse 2s ease-in-out infinite;
+            animation: pulse-node 2s ease-in-out infinite;
         }
         
-        .cloud-dot:nth-child(2) {
+        .network-node.primary {
+            fill: #8ab4f8;
+        }
+        
+        .network-node:nth-child(2) {
             animation-delay: 0.3s;
         }
         
-        .cloud-dot:nth-child(3) {
+        .network-node:nth-child(3) {
             animation-delay: 0.6s;
         }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+        .network-node:nth-child(4) {
+            animation-delay: 0.9s;
         }
         
-        @keyframes pulse {
+        .network-node:nth-child(5) {
+            animation-delay: 1.2s;
+        }
+        
+        @keyframes pulse-line {
             0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        @keyframes pulse-node {
+            0%, 100% { 
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% { 
+                transform: scale(1.15);
+                opacity: 1;
+            }
         }
         
         h1 {
@@ -200,12 +219,22 @@
     </style>
 </head>
 <body>
-    <div class="cloud-animation">
-        <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
-            <path class="cloud" d="M30,50 Q30,35 45,35 Q45,25 60,25 Q75,25 75,35 Q90,35 90,50 Q90,65 75,65 L45,65 Q30,65 30,50 Z"/>
-            <circle class="cloud-dot" cx="45" cy="50" r="3"/>
-            <circle class="cloud-dot" cx="60" cy="50" r="3"/>
-            <circle class="cloud-dot" cx="75" cy="50" r="3"/>
+    <div class="network-animation">
+        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- Connections -->
+            <line class="network-line" x1="100" y1="70" x2="40" y2="30" />
+            <line class="network-line" x1="100" y1="70" x2="160" y2="30" />
+            <line class="network-line" x1="100" y1="70" x2="40" y2="110" />
+            <line class="network-line" x1="100" y1="70" x2="160" y2="110" />
+            <line class="network-line" x1="40" y1="30" x2="160" y2="30" />
+            <line class="network-line" x1="40" y1="110" x2="160" y2="110" />
+            
+            <!-- Nodes -->
+            <circle class="network-node" cx="40" cy="30" r="6" />
+            <circle class="network-node" cx="160" cy="30" r="6" />
+            <circle class="network-node primary" cx="100" cy="70" r="8" />
+            <circle class="network-node" cx="40" cy="110" r="6" />
+            <circle class="network-node" cx="160" cy="110" r="6" />
         </svg>
     </div>
     
@@ -214,7 +243,7 @@
     
     <p>
         Розробка <strong>Yana.Diia.AI</strong> — provider-agnostic AI-асистент для екосистеми Diia. 
-       
+    
     </p>
     
     <a href="https://be-transparent.github.io/Yana.Diia/" class="project-link">
@@ -254,11 +283,9 @@
         <div class="stack-item">FastAPI</div>
         <div class="stack-item">Next.js</div>
         <div class="stack-item">AWS LiteLLM</div>
-        <div class="stack-item">Docker</div>
         <div class="stack-item">CodeMie</div>
     </div>
-    
-    
+ 
         </p>
     </div>
     
