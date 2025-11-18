@@ -13,73 +13,131 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background: #fff;
-            max-width: 800px;
+            font-family: 'e-Ukraine', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #e8eaed;
+            background: #1a1d21;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 60px 30px;
+            padding: 80px 40px;
+        }
+        
+        .cloud-animation {
+            width: 120px;
+            height: 80px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+        
+        .cloud {
+            fill: none;
+            stroke: #5f6368;
+            stroke-width: 2;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .cloud-dot {
+            fill: #5f6368;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .cloud-dot:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        
+        .cloud-dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
         }
         
         h1 {
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #000;
+            font-size: 2.8em;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #e8eaed;
+            letter-spacing: -0.5px;
         }
         
         h2 {
-            font-size: 1.5em;
-            font-weight: 600;
-            margin: 40px 0 20px;
-            color: #000;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-        
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
+            font-size: 1.6em;
+            font-weight: 500;
+            margin: 50px 0 24px;
+            color: #e8eaed;
+            border-bottom: 1px solid #3c4043;
+            padding-bottom: 12px;
         }
         
         .tagline {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 30px;
+            font-size: 1.15em;
+            color: #9aa0a6;
+            margin-bottom: 35px;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            color: #bdc1c6;
+            line-height: 1.8;
+        }
+        
+        a {
+            color: #8ab4f8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        a:hover {
+            color: #aecbfa;
         }
         
         .project-link {
-            display: inline-block;
-            background: #000;
-            color: #fff;
-            padding: 12px 30px;
-            border-radius: 4px;
-            font-weight: 600;
-            margin: 20px 0 40px;
-            transition: background 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #2d3135;
+            color: #e8eaed;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 500;
+            margin: 25px 0 40px;
+            border: 1px solid #3c4043;
+            transition: all 0.2s;
         }
         
         .project-link:hover {
-            background: #333;
-            text-decoration: none;
+            background: #35393d;
+            border-color: #5f6368;
+        }
+        
+        .icon {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
         
         .team-list {
             list-style: none;
-            margin: 20px 0;
+            margin: 24px 0;
         }
         
         .team-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
+            padding: 14px 0;
+            border-bottom: 1px solid #3c4043;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .team-list li:last-child {
@@ -87,30 +145,72 @@
         }
         
         .member-name {
-            font-weight: 600;
-            color: #000;
+            font-weight: 500;
+            color: #e8eaed;
+        }
+        
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 24px 0;
+        }
+        
+        .stack-item {
+            background: #2d3135;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #bdc1c6;
+            border: 1px solid #3c4043;
+            text-align: center;
+        }
+        
+        .feature-box {
+            background: #2d3135;
+            border: 1px solid #3c4043;
+            border-left: 3px solid #5f6368;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 24px 0;
         }
         
         footer {
-            margin-top: 60px;
+            margin-top: 70px;
             padding-top: 30px;
-            border-top: 1px solid #ddd;
-            color: #999;
+            border-top: 1px solid #3c4043;
+            color: #9aa0a6;
             font-size: 0.9em;
+            line-height: 1.6;
         }
         
-        code {
-            background: #f5f5f5;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
+        @media (max-width: 768px) {
+            body {
+                padding: 50px 25px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .stack-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
         }
     </style>
 </head>
 <body>
+    <div class="cloud-animation">
+        <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <path class="cloud" d="M30,50 Q30,35 45,35 Q45,25 60,25 Q75,25 75,35 Q90,35 90,50 Q90,65 75,65 L45,65 Q30,65 30,50 Z"/>
+            <circle class="cloud-dot" cx="45" cy="50" r="3"/>
+            <circle class="cloud-dot" cx="60" cy="50" r="3"/>
+            <circle class="cloud-dot" cx="75" cy="50" r="3"/>
+        </svg>
+    </div>
+    
     <h1>Be-Transparent</h1>
-    <p class="tagline">AI-first команда на Diia.AIContest 2025 🇺🇦</p>
+    <p class="tagline">AI-first команда на Diia.AIContest 2025</p>
     
     <p>
         Розробка <strong>Yana.Diia.AI</strong> — provider-agnostic AI-асистент для екосистеми Diia. 
@@ -118,42 +218,58 @@
         Готово до production, готово до державних сервісів.
     </p>
     
-    <a href="https://be-transparent.github.io/Yana.Diia/" class="project-link">Проєкт: Yana.Diia.AI</a>
+    <a href="https://be-transparent.github.io/Yana.Diia/" class="project-link">
+        <svg class="icon" viewBox="0 0 24 24">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+        </svg>
+        Проєкт: Yana.Diia.AI
+    </a>
     
     <h2>Команда</h2>
     <ul class="team-list">
         <li>
-            <span class="member-name">Volodymyr Seferov</span> — 
+            <span class="member-name">Volodymyr Seferov</span>
             <a href="https://github.com/V2473" target="_blank">github.com/V2473</a>
         </li>
         <li>
-            <span class="member-name">Dariia Shevchuk</span> — 
+            <span class="member-name">Dariia Shevchuk</span>
             <a href="https://github.com/dariashevchuk" target="_blank">github.com/dariashevchuk</a>
         </li>
         <li>
-            <span class="member-name">Natalia Ilchuk</span> — 
+            <span class="member-name">Natalia Ilchuk</span>
             <a href="https://github.com/nataliiailchuk" target="_blank">github.com/nataliiailchuk</a>
         </li>
         <li>
-            <span class="member-name">Igor Omelchenko</span> — 
+            <span class="member-name">Igor Omelchenko</span>
             <a href="https://010io.github.io" target="_blank">010io.github.io</a>
         </li>
         <li>
-            <span class="member-name">Bogdan Paranitsya</span> — 
+            <span class="member-name">Bogdan Paranitsya</span>
             <a href="https://github.com/primarch" target="_blank">github.com/primarch</a>
         </li>
     </ul>
     
     <h2>Stack</h2>
-    <p>
-        FastAPI, Next.js, AWS LiteLLM, llama.cpp, PostgreSQL, Redis, Docker, OpenAI API, Telegram Bot API, CodeMie
-    </p>
+    <div class="stack-grid">
+        <div class="stack-item">FastAPI</div>
+        <div class="stack-item">Next.js</div>
+        <div class="stack-item">AWS LiteLLM</div>
+        <div class="stack-item">llama.cpp</div>
+        <div class="stack-item">PostgreSQL</div>
+        <div class="stack-item">Redis</div>
+        <div class="stack-item">Docker</div>
+        <div class="stack-item">OpenAI API</div>
+        <div class="stack-item">CodeMie</div>
+    </div>
     
     <h2>Ключова фіча</h2>
-    <p>
-        Автоматичне перемикання між провайдерами при збоях. Система працює навіть коли AWS/Cloudflare лежать — 
-        перевірено на реальних інцидентах листопада 2024.
-    </p>
+    <div class="feature-box">
+        <p style="margin: 0;">
+            Автоматичне перемикання між провайдерами при збоях. Система працює навіть коли AWS/Cloudflare лежать — 
+            перевірено на реальних інцидентах листопада 2024.
+        </p>
+    </div>
     
     <h2>Контакти</h2>
     <p>
@@ -162,7 +278,9 @@
     </p>
     
     <footer>
-        <p>Diia.AIContest 2025 • Provider-agnostic AI для держсервісів • Powered by AWS LiteLLM & llama.cpp</p>
+        Diia.AIContest 2025<br>
+        Provider-agnostic AI для державних сервісів<br>
+        Powered by AWS LiteLLM & llama.cpp
     </footer>
 </body>
 </html>
