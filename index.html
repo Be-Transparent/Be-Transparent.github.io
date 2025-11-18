@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be-Transparent | Diia.AIContest Team</title>
-    <meta name="description" content="Команда Be-Transparent на Diia.AIContest 2025. Розробка Yana.Diia.AI — суверенного AI-асистента для державних сервісів України">
+    <title>Be-Transparent | Diia.AIContest 2025</title>
+    <meta name="description" content="AI-first команда на Diia.AIContest 2025. Provider-agnostic архітектура для державних сервісів.">
     <style>
         * {
             margin: 0;
@@ -13,241 +13,156 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background: linear-gradient(135deg, #667eea 3%, #764ba2 79%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,1,0,0.3);
-            max-width: 900px;
-            width: 100%;
-            padding: 60px 50px;
-            text-align: center;
-        }
-        
-        .logo {
-            font-size: 5em;
-            margin-bottom: 20px;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.16); }
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 30px;
         }
         
         h1 {
-            font-size: 3em;
-            background: linear-gradient(1345deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 2.5em;
+            font-weight: 700;
             margin-bottom: 10px;
+            color: #000;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 40px 0 20px;
+            color: #000;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
         }
         
         .tagline {
-            font-size: 1.3em;
-            color: #718096;
+            font-size: 1.2em;
+            color: #666;
             margin-bottom: 30px;
-            font-weight: 500;
         }
         
         .project-link {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px 40px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 1.3em;
+            background: #000;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 4px;
             font-weight: 600;
-            margin: 30px 0;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 20px 0 40px;
+            transition: background 0.3s;
         }
         
         .project-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+            background: #333;
+            text-decoration: none;
         }
         
-        .team-section {
-            margin-top: 50px;
-            padding-top: 40px;
-            border-top: 2px solid #e2e8f0;
+        .team-list {
+            list-style: none;
+            margin: 20px 0;
         }
         
-        .team-section h2 {
-            font-size: 2em;
-            color: #667eea;
-            margin-bottom: 30px;
+        .team-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
         }
         
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .team-member {
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            padding: 25px;
-            border-radius: 12px;
-            transition: transform 0.3s;
-        }
-        
-        .team-member:hover {
-            transform: translateY(-5px);
-        }
-        
-        .member-avatar {
-            font-size: 3em;
-            margin-bottom: 10px;
+        .team-list li:last-child {
+            border-bottom: none;
         }
         
         .member-name {
             font-weight: 600;
-            font-size: 1.1em;
-            color: #2d3748;
-            margin-bottom: 8px;
-        }
-        
-        .member-link {
-            display: inline-block;
-            color: #667eea;
-            text-decoration: none;
-            font-size: 0.95em;
-            transition: color 0.3s;
-        }
-        
-        .member-link:hover {
-            color: #764ba2;
-        }
-        
-        .badges {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        
-        .badge {
-            background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9em;
+            color: #000;
         }
         
         footer {
-            margin-top: 40px;
+            margin-top: 60px;
             padding-top: 30px;
-            border-top: 2px solid #e2e8f0;
-            color: #718096;
+            border-top: 1px solid #ddd;
+            color: #999;
+            font-size: 0.9em;
         }
         
-        @media (max-width: 768px) {
-            .card {
-                padding: 40px 30px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .logo {
-                font-size: 3em;
-            }
-            
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="logo">🏆</div>
-        <h1>Be-Transparent</h1>
-        <p class="tagline">Команда Diia.AIContest 2025</p>
-        
-        <div class="badges">
-            <span class="badge">🇺🇦 Suverenity First</span>
-            <span class="badge">⚡ AI-Powered</span>
-            <span class="badge">🛡️ Production-Ready</span>
-        </div>
-        
-        <a href="https://be-transparent.github.io/Yana.Diia/" class="project-link">
-            🤖 Наш проєкт: Yana.Diia.AI
-        </a>
-        
-        <div class="team-section">
-            <h2>👥 Команда (5 учасників)</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-avatar">👨‍💻</div>
-                    <div class="member-name">Volodymyr Seferov</div>
-                    <a href="https://github.com/V2473" class="member-link" target="_blank">
-                        github.com/V2473
-                    </a>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-avatar">👩‍💻</div>
-                    <div class="member-name">Dariia Shevchuk</div>
-                    <a href="https://github.com/dariashevchuk" class="member-link" target="_blank">
-                        github.com/dariashevchuk
-                    </a>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-avatar">👩‍💻</div>
-                    <div class="member-name">Natalia Ilchuk</div>
-                    <a href="https://github.com/nataliiailchuk" class="member-link" target="_blank">
-                        github.com/nataliiailchuk
-                    </a>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-avatar">👨‍💻</div>
-                    <div class="member-name">Igor Omelchenko</div>
-                    <a href="https://010io.github.io/" class="member-link" target="_blank">
-                        010io.github.io
-                    </a>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-avatar">👨‍💻</div>
-                    <div class="member-name">Bogdan Paranitsya</div>
-                    <a href="https://github.com/primarch" class="member-link" target="_blank">
-                        github.com/primarch
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <footer>
-            <p>
-                <strong>Diia.AIContest 2025</strong><br>
-                Provider-agnostic AI для екосистеми Diia
-            </p>
-            <p style="margin-top: 15px; font-size: 0.9em;">
-                🏛️ Готово до інтеграції з державними сервісами<br>
-                ☁️ Powered by AWS LiteLLM & llama.cpp
-            </p>
-        </footer>
-    </div>
+    <h1>Be-Transparent</h1>
+    <p class="tagline">AI-first команда на Diia.AIContest 2025 🇺🇦</p>
+    
+    <p>
+        Розробка <strong>Yana.Diia.AI</strong> — provider-agnostic AI-асистент для екосистеми Diia. 
+        Архітектура з автоматичним failover між AWS/LiteLLM, Diia AI LLM та локальним GGUF. 
+        Готово до production, готово до державних сервісів.
+    </p>
+    
+    <a href="https://be-transparent.github.io/Yana.Diia/" class="project-link">Проєкт: Yana.Diia.AI</a>
+    
+    <h2>Команда</h2>
+    <ul class="team-list">
+        <li>
+            <span class="member-name">Volodymyr Seferov</span> — 
+            <a href="https://github.com/V2473" target="_blank">github.com/V2473</a>
+        </li>
+        <li>
+            <span class="member-name">Dariia Shevchuk</span> — 
+            <a href="https://github.com/dariashevchuk" target="_blank">github.com/dariashevchuk</a>
+        </li>
+        <li>
+            <span class="member-name">Natalia Ilchuk</span> — 
+            <a href="https://github.com/nataliiailchuk" target="_blank">github.com/nataliiailchuk</a>
+        </li>
+        <li>
+            <span class="member-name">Igor Omelchenko</span> — 
+            <a href="https://010io.github.io" target="_blank">010io.github.io</a>
+        </li>
+        <li>
+            <span class="member-name">Bogdan Paranitsya</span> — 
+            <a href="https://github.com/primarch" target="_blank">github.com/primarch</a>
+        </li>
+    </ul>
+    
+    <h2>Stack</h2>
+    <p>
+        FastAPI, Next.js, AWS LiteLLM, llama.cpp, PostgreSQL, Redis, Docker, OpenAI API, Telegram Bot API, CodeMie
+    </p>
+    
+    <h2>Ключова фіча</h2>
+    <p>
+        Автоматичне перемикання між провайдерами при збоях. Система працює навіть коли AWS/Cloudflare лежать — 
+        перевірено на реальних інцидентах листопада 2024.
+    </p>
+    
+    <h2>Контакти</h2>
+    <p>
+        GitHub: <a href="https://github.com/Be-Transparent" target="_blank">github.com/Be-Transparent</a><br>
+        Discord: <a href="https://discord.gg/EwyqmDnrch" target="_blank">Diia.AIContest Server</a>
+    </p>
+    
+    <footer>
+        <p>Diia.AIContest 2025 • Provider-agnostic AI для держсервісів • Powered by AWS LiteLLM & llama.cpp</p>
+    </footer>
 </body>
 </html>
