@@ -1,2 +1,3 @@
 # Be-Transparent.github.io
-Diia.AIContest
+Diia.AIContest 
+https://ai-hackathon.diia.gov.ua/
